@@ -1,0 +1,4 @@
+<properties>
+    <property name="storage-directory" value ="externalConfig" />
+    <property name="channel-count" value ="2" />
+</properties>
