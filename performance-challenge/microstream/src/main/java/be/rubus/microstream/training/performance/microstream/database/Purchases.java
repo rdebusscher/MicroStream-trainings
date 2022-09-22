@@ -11,12 +11,10 @@ import be.rubus.microstream.training.performance.model.BookSales;
 import be.rubus.microstream.training.performance.model.Country;
 import be.rubus.microstream.training.performance.model.Customer;
 import be.rubus.microstream.training.performance.model.Employee;
-import be.rubus.microstream.training.performance.utils.MoneyUtil;
 import one.microstream.persistence.types.Persister;
 import one.microstream.reference.Lazy;
 import one.microstream.reference.Referencing;
 
-import javax.money.MonetaryAmount;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.Function;
@@ -24,7 +22,6 @@ import java.util.function.Predicate;
 import java.util.stream.Stream;
 
 import static java.util.stream.Collectors.*;
-import static org.javamoney.moneta.function.MonetaryFunctions.summarizingMonetary;
 
 /**
  * All purchases made by all customers in all stores.
