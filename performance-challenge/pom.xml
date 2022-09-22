@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>be.rubus.microstream.training</groupId>
+    <artifactId>performance-challenge</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>hibernate</module>
+        <module>model</module>
+        <module>microstream</module>
+        <module>generator</module>
+    </modules>
+    <packaging>pom</packaging>
+
+    <properties>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <microstream.version>07.01.00-MS-GA</microstream.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+
+            <dependency>
+                <groupId>one.microstream</groupId>
+                <artifactId>microstream-storage-embedded</artifactId>
+                <version>${microstream.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>one.microstream</groupId>
+                <artifactId>microstream-storage-embedded-configuration</artifactId>
+                <version>${microstream.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>javax.money</groupId>
+                <artifactId>money-api</artifactId>
+                <version>1.0.3</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>1.7.32</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-jdk14</artifactId>
+                <version>1.7.32</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>

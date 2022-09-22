@@ -1,0 +1,33 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/postgres</property>
+        <property name="hibernate.connection.username">postgres</property>
+        <property name="hibernate.connection.password">mysecretpassword</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQL9Dialect</property>
+        <!--property name="hibernate.generate_statistics">true</property>
+        <property name="show_sql">true</property-->
+
+        <mapping class="be.rubus.microstream.training.performance.hibernate.domain.CustomerEntity"/>
+        <mapping class="be.rubus.microstream.training.performance.hibernate.domain.NamedWithAddressEntity"/>
+        <mapping class="be.rubus.microstream.training.performance.hibernate.domain.NamedEntity"/>
+        <mapping class="be.rubus.microstream.training.performance.hibernate.domain.BaseEntity"/>
+        <mapping class="be.rubus.microstream.training.performance.hibernate.domain.AddressEntity"/>
+        <mapping class="be.rubus.microstream.training.performance.hibernate.domain.CityEntity"/>
+        <mapping class="be.rubus.microstream.training.performance.hibernate.domain.StateEntity"/>
+        <mapping class="be.rubus.microstream.training.performance.hibernate.domain.CountryEntity"/>
+        <mapping class="be.rubus.microstream.training.performance.hibernate.domain.PurchaseEntity"/>
+        <mapping class="be.rubus.microstream.training.performance.hibernate.domain.PurchaseItemEntity"/>
+        <mapping class="be.rubus.microstream.training.performance.hibernate.domain.EmployeeEntity"/>
+        <mapping class="be.rubus.microstream.training.performance.hibernate.domain.ShopEntity"/>
+        <mapping class="be.rubus.microstream.training.performance.hibernate.domain.BookEntity"/>
+        <mapping class="be.rubus.microstream.training.performance.hibernate.domain.AuthorEntity"/>
+        <mapping class="be.rubus.microstream.training.performance.hibernate.domain.GenreEntity"/>
+        <mapping class="be.rubus.microstream.training.performance.hibernate.domain.LanguageEntity"/>
+        <mapping class="be.rubus.microstream.training.performance.hibernate.domain.PublisherEntity"/>
+        <mapping class="be.rubus.microstream.training.performance.hibernate.domain.InventoryItemEntity"/>
+    </session-factory>
+</hibernate-configuration>
