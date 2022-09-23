@@ -44,7 +44,7 @@ Created the template through [MicroProfile Start](https://start.microprofile.io/
 
 Created the template through [Spring Initialzr](https://start.spring.io/), selecting a Java project build by Maven using Java 11 and as dependency added the _Spring Web Services_
 
-![Spring Initializr screenshot](spring-initializr)
+![Spring Initializr screenshot](spring-initializr.png)
 
 - `mvn clean package`
 - `java -jar target/spring-boot-0.0.1-SNAPSHOT.jar`
@@ -55,7 +55,7 @@ Created the template through [Spring Initialzr](https://start.spring.io/), selec
 
 Created the template through [Quarkus Code](https://code.quarkus.io/), selecting a Java 11, Maven and 2 dependencies,  _RestEasy classic_ and _RestEasy classic Jackson_.
 
-![Quarkus Code screenshot](quarkus-code)
+![Quarkus Code screenshot](quarkus-code.png)
 
 - `mvn clean quarkus:dev`
 - `curl localhost:8080/hello/products`
