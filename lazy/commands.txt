@@ -1,0 +1,17 @@
+java -jar target/lazy-microbundle.jar
+
+
+curl localhost:8080/data/photos
+
+Attach Zulu Mission Control
+Create HeapDump
+Look for classes be.rubus.xxx
+
+Restart application
+
+curl localhost:8080/data/lazy
+
+Create HeapDump
+Look for classes be.rubus.xxx
+
+curl localhost:8080/data/lazy/load
