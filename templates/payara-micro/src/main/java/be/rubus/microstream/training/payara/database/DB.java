@@ -1,6 +1,7 @@
 package be.rubus.microstream.training.payara.database;
 
 import be.rubus.microstream.training.payara.model.Product;
+import one.microstream.persistence.types.Storer;
 import one.microstream.storage.embedded.configuration.types.EmbeddedStorageConfiguration;
 import one.microstream.storage.types.StorageManager;
 
@@ -22,13 +23,19 @@ public final class DB {
 
                 .createEmbeddedStorageManager()
                 .start();
-        initData(root);
+        initData(result, root);
         return result;
     }
 
-    private static void initData(Root root) {
+    private static void initData(StorageManager storageManager, Root root) {
         if (root.getProducts().isEmpty()) {
             root.addProduct(new Product(-1L, "Banana", "A yellow curved fruit", 3));
+
+            // Store entire object graph, unconditionally
+            Storer storer = storageManager.createEagerStorer();
+            storer.store(root);
+            storer.commit();
+
         }
     }
 
