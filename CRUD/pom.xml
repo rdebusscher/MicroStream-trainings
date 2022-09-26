@@ -14,7 +14,7 @@
         <maven.compiler.source>11</maven.compiler.source>
 
         <payaraVersion>5.2021.1</payaraVersion>
-        <final.name>demo</final.name>
+        <final.name>crud</final.name>
 
         <microstream.version>07.01.00-MS-GA</microstream.version>
     </properties>
@@ -42,6 +42,7 @@
         </dependency>
 
     </dependencies>
+
     <build>
         <finalName>crud</finalName>
     </build>

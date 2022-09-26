@@ -38,8 +38,8 @@ First execution (cold status). Values are in milliseconds
 
 |              | MicroStream | Hibernate |
 |--------------|-------------|-----------|
-| Load/connect | 1636        | 77,8      |
-| Query        | 1546        | 727,9     |
+| Load/connect | 1636        | 1546      |
+| Query        | 77,8        | 727,9     |
 
 Second execution (hot status). Values are in milliseconds
 

@@ -83,15 +83,12 @@ public class Streams {
 
     private static BigDecimal booksPriceSum(List<Book> books) {
 
-        return books.stream().map(Book::getPrice).reduce(BigDecimal.ZERO, BigDecimal::add);
+        return null;
     }
 
 
     private static Map<Author, BigDecimal> booksGroupPriceSum(List<Book> books) {
 
-        return books.stream().collect(
-                Collectors.groupingBy(
-                        Book::getAuthor,
-                        Collectors.reducing(BigDecimal.ZERO, Book::getPrice, BigDecimal::add)));
+        return null;
     }
 }

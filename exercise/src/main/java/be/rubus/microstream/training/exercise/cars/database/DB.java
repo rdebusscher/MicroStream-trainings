@@ -5,6 +5,7 @@ import be.rubus.microstream.training.exercise.cars.model.Car;
 import be.rubus.microstream.training.exercise.cars.model.Company;
 import one.microstream.persistence.types.Storer;
 import one.microstream.storage.embedded.configuration.types.EmbeddedStorageConfiguration;
+import one.microstream.storage.embedded.types.EmbeddedStorageManager;
 import one.microstream.storage.types.StorageManager;
 
 public final class DB {
@@ -16,13 +17,9 @@ public final class DB {
     }
 
     private static StorageManager createStorageManager(Company root) {
-        StorageManager result = EmbeddedStorageConfiguration.Builder()
-                .setStorageDirectory("microstream-data")
-                .setChannelCount(1)
-
+        StorageManager result = EmbeddedStorageConfiguration.load("microstream.properties")
                 .createEmbeddedStorageFoundation()
                 .setRoot(root)
-
                 .createEmbeddedStorageManager()
                 .start();
         initData(result, root);
@@ -40,7 +37,7 @@ public final class DB {
             root.getBrands().add(mercedes);
             root.getBrands().add(opel);
 
-            Car car = new Car(Ids.nextCarId());
+            Car car = new Car(0L);
             car.setBrand(opel);
             car.setModel("Zafira");
             car.setPrice(84.9);

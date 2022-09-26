@@ -10,9 +10,12 @@ A possible solution could be
 
 The endpoints that are required are:
 
-a.	…/car/list
-b.	…/car/get
-c.	…/car/delete
-d.	…/car/insert
-e.	…/brand/list
-f.	…/brand/update
+-	…/car/list
+-	…/car/get
+-	…/car/delete
+-	…/car/insert
+-	…/brand/list
+-	…/brand/insert
+-	…/brand/update
+
+Additional task: Use properties or XML file configuration.

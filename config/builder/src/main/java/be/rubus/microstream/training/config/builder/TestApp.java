@@ -22,7 +22,6 @@ public class TestApp {
         // requires  microstream-storage-embedded-configuration dependency
         return EmbeddedStorageConfiguration.Builder()
                 .setStorageDirectory("builderConfig")
-                .setBackupDirectory("storage-backup")
                 .setChannelCount(4)
 
                 .createEmbeddedStorageFoundation()
