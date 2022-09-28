@@ -23,15 +23,16 @@ public class BrandController {
 
     @POST
     public Response addBrand(Brand dto) {
-        Optional<Brand> existingBrand = DB.getRoot().getBrands().stream()
+        List<Brand> brands = DB.getRoot().getBrands();
+        Optional<Brand> existingBrand = brands.stream()
                 .filter(b -> b.getName().equalsIgnoreCase(dto.getName()))
                 .findAny();
         if (existingBrand.isPresent()) {
             return Response.status(Response.Status.PRECONDITION_FAILED).build();
         }
 
-        DB.getRoot().getBrands().add(dto);
-        DB.getInstance().store(DB.getRoot().getBrands());
+        brands.add(dto);
+        DB.getInstance().store(brands);
         return Response.ok(dto).build();
 
     }

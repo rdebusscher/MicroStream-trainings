@@ -90,11 +90,10 @@ public class StreamsResult {
     }
 
 
-    private static Map<Author, BigDecimal> booksGroupPriceSum(List<Book> books) {
-
-        return books.stream().collect(
-                Collectors.groupingBy(
-                        Book::getAuthor,
-                        Collectors.reducing(BigDecimal.ZERO, Book::getPrice, BigDecimal::add)));
+    private static Map<Author, Long> booksGroupAuthorCount(List<Book> books) {
+        // Count the number of books for each author
+        return books.stream().collect(Collectors.groupingBy(
+                Book::getAuthor,
+                Collectors.reducing(0L, b -> 1L, Long::sum)));
     }
 }

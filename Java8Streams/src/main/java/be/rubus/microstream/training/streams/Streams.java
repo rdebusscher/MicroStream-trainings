@@ -25,7 +25,7 @@ public class Streams {
         //System.out.println(createStringCollector());
         //System.out.println(findAny(books));
         //System.out.println(findFirst(books));
-        //System.out.println(booksPriceSum(books));
+        System.out.println(booksPriceSum(books));
         //System.out.println(booksGroupPriceSum(books));
     }
 
@@ -87,7 +87,7 @@ public class Streams {
     }
 
 
-    private static Map<Author, BigDecimal> booksGroupPriceSum(List<Book> books) {
+    private static Map<Author, Long> booksGroupAuthorCount(List<Book> books) {
 
         return null;
     }

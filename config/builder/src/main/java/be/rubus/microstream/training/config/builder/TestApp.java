@@ -25,6 +25,8 @@ public class TestApp {
                 .setChannelCount(4)
 
                 .createEmbeddedStorageFoundation()
+                // Further customise the Foundation if needed.
+                //.onConnectionFoundation()
                 .setRoot(root)
 
                 .createEmbeddedStorageManager()

@@ -15,7 +15,7 @@ public class TestContinuousBackup {
             long cnt = numberList.size();
             System.out.printf("Storage contains %s items%n", cnt);
 
-            for (int i = 0; i < 1000; i++) {
+            for (int i = 0; i < 100_000_000; i++) {
                 numberList.add(cnt + i);
                 storageManager.store(numberList);
             }
@@ -25,6 +25,7 @@ public class TestContinuousBackup {
                 storageManager.store(numberList);
             }
 
+            //Thread.sleep(500L);  needed to have the last item in backup. backup is Async?
             System.exit(-1); // Simulate crash, remove 'microstream-data' directory
         }
 
