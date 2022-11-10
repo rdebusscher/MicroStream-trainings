@@ -8,7 +8,7 @@ import java.util.UUID;
 public class Store {
 	private String id = UUID.randomUUID().toString();
 
-	private List<Sell> sells = new ArrayList<>();
+	private List<Sale> sales = new ArrayList<>();
 	private List<Employee> employees = new ArrayList<>();
 	private List<Book> books = new ArrayList<>();
 

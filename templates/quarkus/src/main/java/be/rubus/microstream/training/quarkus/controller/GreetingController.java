@@ -20,6 +20,7 @@ public class GreetingController {
 
     @GET
     @Path("/products")
+    @Produces(MediaType.APPLICATION_JSON)
     public List<Product> getAllProducts() {
         return DB.getRoot().getProducts();
     }

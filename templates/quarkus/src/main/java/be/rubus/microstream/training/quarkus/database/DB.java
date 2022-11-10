@@ -2,6 +2,7 @@ package be.rubus.microstream.training.quarkus.database;
 
 import be.rubus.microstream.training.quarkus.model.Product;
 import one.microstream.persistence.types.Storer;
+import one.microstream.reflect.ClassLoaderProvider;
 import one.microstream.storage.embedded.configuration.types.EmbeddedStorageConfiguration;
 import one.microstream.storage.types.StorageManager;
 
@@ -19,6 +20,8 @@ public final class DB {
                 .setChannelCount(1)
 
                 .createEmbeddedStorageFoundation()
+                .onConnectionFoundation(cf -> cf.setClassLoaderProvider(ClassLoaderProvider.New(
+                        root.getClass().getClassLoader())))
                 .setRoot(root)
 
                 .createEmbeddedStorageManager()

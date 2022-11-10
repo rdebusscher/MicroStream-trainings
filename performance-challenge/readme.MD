@@ -1,6 +1,6 @@
 # Performance demo
 
-Based on the Performance White Paper code where query execution (read) is compared bewteen MicroStream and database based frameworks.  See  https://github.com/rdebusscher/performance-whitepaper.
+Based on the Performance White Paper code where query execution (read) is compared between MicroStream and database based frameworks.  See  https://github.com/rdebusscher/performance-whitepaper.
 
 
 # generation of the test data

@@ -59,7 +59,7 @@ public class SolutionController {
     @Path("/createSingle")
     public Response createSingleBook() {
         Author author = new Author(100L, "John", "Doe", "j.doe@example.com", "Male");
-        Book book = new Book("123456789", "Single Book", LocalDate.now(),  BigDecimal.valueOf(13.32), author);
+        Book book = new Book("123456789", "Single Book", LocalDate.now().minusDays(30),  BigDecimal.valueOf(13.32), author);
 
         // Enter your code here
         List<Book> books = DB.getRoot().getBooks();
