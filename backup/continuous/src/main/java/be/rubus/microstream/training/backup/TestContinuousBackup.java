@@ -15,7 +15,7 @@ public class TestContinuousBackup {
             long cnt = numberList.size();
             System.out.printf("Storage contains %s items%n", cnt);
 
-            for (int i = 0; i < 100_000_000; i++) {
+            for (int i = 0; i < 1_000; i++) {
                 numberList.add(cnt + i);
                 storageManager.store(numberList);
             }

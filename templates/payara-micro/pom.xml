@@ -13,7 +13,7 @@
         <failOnMissingWebXml>false</failOnMissingWebXml>
         <maven.compiler.source>11</maven.compiler.source>
 
-        <payaraVersion>5.2021.1</payaraVersion>
+        <payaraVersion>5.2022.4</payaraVersion>
         <final.name>demo</final.name>
 
         <microstream.version>07.01.00-MS-GA</microstream.version>
@@ -56,7 +56,7 @@
                     <plugin>
                         <groupId>fish.payara.maven.plugins</groupId>
                         <artifactId>payara-micro-maven-plugin</artifactId>
-                        <version>1.0.5</version>
+                        <version>1.0.7</version>
                         <executions>
                             <execution>
                                 <phase>package</phase>

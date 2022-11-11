@@ -10,13 +10,13 @@
     <parent>
         <groupId>io.micronaut</groupId>
         <artifactId>micronaut-parent</artifactId>
-        <version>3.7.0</version>
+        <version>3.7.3</version>
     </parent>
 
     <properties>
         <jdk.version>11</jdk.version>
         <release.version>11</release.version>
-        <micronaut.version>3.7.0</micronaut.version>
+        <micronaut.version>3.7.3</micronaut.version>
         <micronaut.runtime>netty</micronaut.runtime>
         <exec.mainClass>be.rubus.microstream.training.micronaut.Application</exec.mainClass>
 
@@ -131,7 +131,7 @@
                         </path>
                     </annotationProcessorPaths>
                     <compilerArgs>
-                        <arg>-Amicronaut.processing.group=com.example</arg>
+                        <arg>-Amicronaut.processing.group=be.rubus</arg>
                         <arg>-Amicronaut.processing.module=demo</arg>
                     </compilerArgs>
                 </configuration>

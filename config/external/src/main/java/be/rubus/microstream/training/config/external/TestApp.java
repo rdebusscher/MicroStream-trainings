@@ -3,14 +3,13 @@ package be.rubus.microstream.training.config.external;
 import be.rubus.microstream.training.config.model.InitData;
 import be.rubus.microstream.training.config.model.Root;
 import one.microstream.storage.embedded.configuration.types.EmbeddedStorageConfiguration;
-import one.microstream.storage.embedded.types.EmbeddedStorageFoundation;
 import one.microstream.storage.types.StorageManager;
 
 public class TestApp {
 
     public static void main(String[] args) {
         Root root = new Root();
-        try (StorageManager storageManager = createStorageManager(root, /*"storage.properties" */ "storage.xml")) {
+        try (StorageManager storageManager = createStorageManager(root, "storage.properties" /* "storage.xml"*/)) {
 
             InitData.ensureDefaultData(storageManager);
 

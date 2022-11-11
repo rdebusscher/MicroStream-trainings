@@ -3,14 +3,12 @@ package be.rubus.microstream.training.lazy.controller;
 import be.rubus.microstream.training.lazy.database.DBLazy;
 import be.rubus.microstream.training.lazy.model.LazyPhoto;
 
-import javax.inject.Singleton;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.core.Response;
 import java.util.List;
 
 @Path("/lazy")
-@Singleton
 public class LazyPhotoController {
 
     @GET

@@ -25,8 +25,8 @@ public class Streams {
         //System.out.println(createStringCollector());
         //System.out.println(findAny(books));
         //System.out.println(findFirst(books));
-        System.out.println(booksPriceSum(books));
-        //System.out.println(booksGroupPriceSum(books));
+        //System.out.println(booksPriceSum(books));
+        //System.out.println(booksGroupAuthorCount(books));
     }
 
     private static void createIntStream() {

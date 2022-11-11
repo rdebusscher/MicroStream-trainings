@@ -5,7 +5,6 @@ import be.rubus.microstream.training.exercise.cars.model.Car;
 import be.rubus.microstream.training.exercise.cars.model.Company;
 import one.microstream.persistence.types.Storer;
 import one.microstream.storage.embedded.configuration.types.EmbeddedStorageConfiguration;
-import one.microstream.storage.embedded.types.EmbeddedStorageManager;
 import one.microstream.storage.types.StorageManager;
 
 public final class DB {

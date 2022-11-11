@@ -1,8 +1,10 @@
 package be.rubus.microstream.training.skipped;
 
+import one.microstream.persistence.types.PersistenceFieldEvaluator;
 import one.microstream.storage.embedded.configuration.types.EmbeddedStorageConfiguration;
 import one.microstream.storage.types.StorageManager;
 
+import java.lang.reflect.Modifier;
 import java.util.List;
 
 public class TestApp {
@@ -23,13 +25,15 @@ public class TestApp {
         if (products.isEmpty()) {
             System.out.println("!! No data loaded yet, adding a product");
 
-            Product product = new Product("Ba", "Banana", "This is never stored");
+            Product product = new Product("Ba", "Banana", "This is never stored", "internal");
             products.add(product);
             storageManager.store(products);
         }
     }
 
     private static StorageManager createStorageManager(Root root) {
+        PersistenceFieldEvaluator fieldEvaluator =
+                (clazz, field) -> !field.getName().startsWith("_") && !Modifier.isTransient(field.getModifiers());
 
         return EmbeddedStorageConfiguration.Builder()
                 .setStorageDirectory("microstream-data")
@@ -37,7 +41,7 @@ public class TestApp {
 
                 .createEmbeddedStorageFoundation()
                 .setRoot(root)
-
+                //.onConnectionFoundation(cf -> cf.setFieldEvaluatorPersistable(fieldEvaluator))
                 .createEmbeddedStorageManager()
                 .start();
     }

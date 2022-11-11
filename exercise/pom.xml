@@ -13,7 +13,7 @@
         <failOnMissingWebXml>false</failOnMissingWebXml>
         <maven.compiler.source>11</maven.compiler.source>
 
-        <payaraVersion>5.2021.1</payaraVersion>
+        <payaraVersion>5.2022.4</payaraVersion>
         <final.name>cars</final.name>
 
         <microstream.version>07.01.00-MS-GA</microstream.version>

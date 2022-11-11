@@ -7,11 +7,13 @@ public class Product {
     private final String code;
     private final String name;
     private final transient String ignored;
+    private final String _internalValue;
 
-    public Product(String code, String name, String ignored) {
+    public Product(String code, String name, String ignored, String internalValue) {
         this.code = code;
         this.name = name;
         this.ignored = ignored;
+        _internalValue = internalValue;
     }
 
     public String getCode() {
@@ -32,6 +34,7 @@ public class Product {
                 .add("code='" + code + "'")
                 .add("name='" + name + "'")
                 .add("ignored='" + ignored + "'")
+                .add("_internal='" + _internalValue + "'")
                 .toString();
     }
 }
