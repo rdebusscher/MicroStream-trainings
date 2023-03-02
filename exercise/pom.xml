@@ -10,8 +10,8 @@
     <properties>
 
         <maven.compiler.target>11</maven.compiler.target>
-        <failOnMissingWebXml>false</failOnMissingWebXml>
         <maven.compiler.source>11</maven.compiler.source>
+        <failOnMissingWebXml>false</failOnMissingWebXml>
 
         <payaraVersion>5.2022.4</payaraVersion>
         <final.name>cars</final.name>
@@ -56,7 +56,7 @@
                     <plugin>
                         <groupId>fish.payara.maven.plugins</groupId>
                         <artifactId>payara-micro-maven-plugin</artifactId>
-                        <version>1.0.5</version>
+                        <version>1.0.7</version>
                         <executions>
                             <execution>
                                 <phase>package</phase>
