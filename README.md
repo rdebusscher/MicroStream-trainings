@@ -25,6 +25,19 @@ The directory `Java8Streams` has a crash course Java 8 Streams, the Query langua
 
 The usage of Lazy loading can be demonstrated with the example in the directory `lazy`. You can use a tool like _Azul Mission Control_  to take and analyse heap dumps.
 
-The project _autimatic_ in the Legacy Type Mapping Git hub repo, see https://github.com/rdebusscher/microstream-legacy-type-mapping/tree/main/automatic, can be used to demonstrate the working of the automatic Legacy Type Mapping functionality of MicroStream.
+The project _automatic_ in the Legacy Type Mapping Git hub repo, see https://github.com/rdebusscher/microstream-legacy-type-mapping/tree/main/automatic, can be used to demonstrate the working of the automatic Legacy Type Mapping functionality of MicroStream.
 
 The directory `backup` contains an example of incremental backup and how to issue a full backup.
+
+An example of a dup into CSV is available in directory `export-csv`.
+
+## Note
+
+Examples are configured for JDK 11. If you change the version to JDK 17, you require an updated version of the Maven WAR plugin (for those examples that are creating a WAR file, like the `CRUD` and `Excercise` one)
+
+```
+<plugin>
+   <artifactId>maven-war-plugin</artifactId>
+   <version>3.3.2</version>
+</plugin>
+```
