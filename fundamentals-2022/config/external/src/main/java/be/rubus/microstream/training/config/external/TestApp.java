@@ -22,6 +22,14 @@ public class TestApp {
     private static StorageManager createStorageManager(Root root, String configFile) {
         return EmbeddedStorageConfiguration.load(configFile)
                 .createEmbeddedStorageFoundation()
+
+                // In environments with multi level class loaders (Application runtimes, ...)
+                //.onConnectionFoundation(cf -> cf.setClassLoaderProvider(ClassLoaderProvider.New(
+                //    Thread.currentThread().getContextClassLoader())))
+
+                // Specialised Handlers
+                //.onConnectionFoundation(BinaryHandlersJDK17::registerJDK17TypeHandlers);
+
                 .setRoot(root)
                 .createEmbeddedStorageManager()
                 .start();

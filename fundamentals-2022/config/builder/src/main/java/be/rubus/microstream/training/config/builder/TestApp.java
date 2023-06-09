@@ -26,7 +26,14 @@ public class TestApp {
 
                 .createEmbeddedStorageFoundation()
                 // Further customise the Foundation if needed.
-                //.onConnectionFoundation()
+
+                // In environments with multi level class loaders (Application runtimes, ...)
+                //.onConnectionFoundation(cf -> cf.setClassLoaderProvider(ClassLoaderProvider.New(
+                //    Thread.currentThread().getContextClassLoader())))
+
+                // Specialised Handlers
+                //.onConnectionFoundation(BinaryHandlersJDK17::registerJDK17TypeHandlers);
+
                 .setRoot(root)
 
                 .createEmbeddedStorageManager()
